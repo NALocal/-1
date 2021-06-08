@@ -6,5 +6,8 @@ https://github.com/NALocal/sixSchool-Front-end-design
 css切版作業1(01)  
 https://nalocal.github.io/sixSchool-Front-end-design/01/  
   
-flex切版練習1(02)  
+flex切版練習(02)  
 https://nalocal.github.io/sixSchool-Front-end-design/02/  
+  
+flex切版作業2(03)  
+https://nalocal.github.io/sixSchool-Front-end-design/03/
