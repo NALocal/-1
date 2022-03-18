@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複習 - flex</title>
+    <style type="text/css">
+        .flex{
+            width: 800px;
+            height: 800px;
+            background: #ccc;
+            display: flex;
+            /* flex-direction: column; */
+            /* 子物件主軸置中 */
+            justify-content: center;
+            /* flex-wrap: wrap; */
+        }
+        .item{
+            width: 50%;
+            /* height: 200px; */
+            background-color: #f00;
+            font-size: 100px;
+            margin: 20px;
+            /* 物件副軸置中 */
+            /* align-self: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">1  fkoge  rkp   og  krepog  kreopk  fpo</div>
+        <div class="item">2</div>
+    </div>
+</body>
+</html>

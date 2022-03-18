@@ -1,0 +1,71 @@
+.navbar--root .navbar {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1110px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 15px;
+	padding-right: 15px;
+	/* border: 1px solid #ccc; */
+}
+.navbar--root .navbar__logo a img {
+	/* background-image: url(../image/d’Perfume/d’Perfume.png); */
+	max-width: 128px;
+	max-height: 38px;
+	vertical-align: middle;
+}
+.navbar--root .navbar__menu {
+	display: flex;
+	align-items: center;
+}
+.navbar--root .navbar__menu__item {
+	color: #8d8d8d;
+	display: flex;
+}
+.navbar--root .navbar__menu__item ~ .navbar__menu__item {
+	margin-left: 32px;
+}
+.navbar--root .navbar__menu--mobile {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar--root .navbar {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.navbar--root .navbar__menu {
+		display: none;
+	}
+	.navbar--root .navbar__menu--mobile {
+		display: flex;
+		align-items: center;
+	}
+	.navbar--root .navbar__menu--mobile .navbar__menu--mobile__item:first-child {
+		position: relative;
+	}
+	.navbar--root
+		.navbar__menu--mobile
+		.navbar__menu--mobile__item:first-child:before {
+		content: "3";
+		position: absolute;
+		top: -12px;
+		right: -5px;
+		color: #fff;
+		background-color: #916000;
+		max-height: 16px;
+		max-width: 16px;
+		font-size: 12px;
+		padding-left: 4px;
+		padding-right: 4px;
+		border-radius: 7px;
+	}
+	.navbar--root .navbar__menu--mobile__item {
+		color: #8d8d8d;
+		display: flex;
+	}
+	.navbar--root .navbar__menu--mobile__item ~ .navbar__menu--mobile__item {
+		margin-left: 32px;
+	}
+}
