@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交錯漂浮版</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            padding: 100px; /*上下 左右*/
+            background: linear-gradient(20deg,#3d5493 30%,#1aa2a0 70%) fixed center center / 100% 100%; /*角度,色彩1 色彩1佔比,色彩2 色彩2佔比, fixed 固定背景不動 色彩1位置 色彩2位置 , 單背景寬 單背景高 */
+        }
+        .wrap{
+            width: 1200px;
+            margin: auto;
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+        .item h2{
+            font-weight: 700;
+        }
+        .item p{
+            font-weight: 200;
+        }
+        .item .pic{
+            width:55%;
+        }
+        .item .pic img{
+            width:100%;
+            vertical-align: middle;
+        }
+        .item .txt{
+            width:55%;
+            /*flex-shrink: 0; 關閉flex子物件的自動收縮*/
+            padding: 50px 30px;
+            position: relative;
+            z-index: 1;
+            font-family: 'Noto Sans TC',sans-serif;
+        }
+        .item > :first-child{
+            margin-right: -10%;
+        }
+        .item:nth-child(1) .txt{
+            background-color: rgba(240, 174, 193,0.8);
+        }
+        .item:nth-child(2) .txt{
+            background-color: rgba(42, 253, 208,0.8);
+        }
+        .item:nth-child(3) .txt{
+            background-color: rgba(254, 201, 121,0.8);
+        }
+        .item:nth-child(4) .txt{
+            background-color: rgba(150, 219, 214,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- item 1 -->
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=10" alt="">
+            </div>
+            <div class="txt">
+                <h2>後端都懂得切版</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, error!</p>
+            </div>
+        </div>
+        <!-- item 2 -->
+        <div class="item">
+            <div class="txt">
+                <h2>我的記憶力只有三秒</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, error!</p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=20" alt="">
+            </div>
+        </div>
+        <!-- item 3 -->
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=30" alt="">
+            </div>
+            <div class="txt">
+                <h2>這裡是很爛的假前端</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, error!</p>
+            </div>
+        </div>
+        <!-- item 4 -->
+        <div class="item">
+            <div class="txt">
+                <h2>蛤阿你說甚麼</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, error!</p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/600/350?random=40" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

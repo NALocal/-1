@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>破格網站</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC',sans-serif;
+        }
+        .root{
+            height: 100vh;
+            display: flex;
+            /* align-items: center; */
+            background: linear-gradient(-45deg,#fffaf0,#f8c3c1);
+        }
+        .card--root {
+            display: flex;
+            width: 1200px;
+            margin: 100px auto;
+            /* background-color: #999; */
+            padding-top: 75px;
+            overflow: hidden;
+        }
+        .card--root .card{
+            width: 370px;
+            min-height: 300px;
+            max-height: 400px;
+            margin: 0 15px;
+            text-align: center;
+            border: 10px solid #f9cec2;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 10px 20px 50px #f7b6a7;
+        }
+        .card--root .card .card__icon{
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            margin: -75px auto 0;
+            font-size: 85px;
+            /* 單行文字的狀況可以拿來做垂直居中 */
+            line-height: 150px;
+            border-radius: 50%;
+            color: #f5afac;
+            position: relative;
+        }
+        .card--root .card:hover .card__icon .fa{
+            animation: card__icon--shake 0.05s linear infinite alternate;
+            /* linear無向量加速 infinite無限循環 alternate折返動畫 */
+        }
+        .card--root .card .card__icon:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-top: 10px solid #f9cec2;
+            border-right: 10px solid #f9cec2;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            left: 0px;
+            top: 0px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transform: rotate(-45deg);
+        }
+        .card--root .card .card__txt{
+            padding: 20px 20px 2em 20px;
+        }
+        .card--root .card .card__txt h3{
+            color: #f5afac;
+        }
+        .card--root .card .card__txt p{
+            color: #ccc;
+        }
+        @keyframes card__icon--shake{
+            0%{ transform: rotate(-10deg);}
+            100%{ transform: rotate(10deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="card--root">
+            <div class="card">
+                <div class="card__icon">
+                    <i class="fa fa-gavel"></i>
+                </div>
+                <div class="card__txt">
+                    <h3>暴力後端入門</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__icon">
+                    <i class="fa fa-thumbs-up"></i>
+                </div>
+                <div class="card__txt">
+                    <h3>後端都懂切版</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, doloribus? Quibusdam, odit. Pariatur, voluptatibus expedita quis laboriosam sunt itaque fuga.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__icon">
+                    <i class="fa fa-bell"></i>
+                </div>
+                <div class="card__txt">
+                    <h3>CSScoke</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nisi non tenetur facilis magni itaque. Asperiores blanditiis quia in adipisci eum cupiditate ad, culpa accusantium? Cum, beatae. Omnis, fuga magni!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

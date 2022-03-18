@@ -1,0 +1,60 @@
+.introduce2--root .introduce {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.introduce2--root .introduce__card {
+	display: flex;
+	justify-content: center;
+}
+.introduce2--root .introduce__card__img {
+	max-width: 730px;
+	height: 520px;
+}
+.introduce2--root .introduce__card__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.introduce2--root .introduce__card__txt {
+	max-width: 365px;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.introduce2--root .introduce__card__txt h2 {
+	font-size: 32px;
+}
+.introduce2--root .introduce__card__txt p {
+	font-size: 20px;
+}
+.introduce2--root .introduce__card__txt p ~ p {
+	font-size: 16px;
+	margin-top: 16px;
+}
+.introduce2--root .introduce__card__txt a {
+	margin-top: 16px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #ac8a46;
+}
+
+@media only screen and (max-width: 768px) {
+	.introduce2--root .introduce {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.introduce2--root .introduce__card {
+		flex-direction: column;
+	}
+	.introduce2--root .introduce__card__img {
+		max-width: none;
+		height: 520px; /*強制拉伸..*/
+	}
+	.introduce2--root .introduce__card__txt {
+		margin-top: 8px;
+		margin-left: 0;
+	}
+}

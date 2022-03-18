@@ -1,0 +1,163 @@
+.introduce--root .introduce {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.introduce--root .introduce__card {
+	display: flex;
+	max-width: 1140px;
+	width: 100%;
+	max-height: 555px;
+	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.introduce--root .introduce__card__txt {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.introduce--root .introduce__card__txt__child {
+	padding-left: 18%;
+	padding-right: 18%;
+}
+.introduce--root .introduce__card__txt__child h2 {
+	font-size: 32px;
+	font-weight: 710;
+}
+.introduce--root .introduce__card__txt__child p {
+	font-size: 20px;
+	font-weight: 400;
+}
+.introduce--root .introduce__card__txt__child a {
+	display: block;
+	margin-top: 16px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #ac8a46;
+}
+.introduce--root .introduce__card__img {
+	width: 50%;
+}
+.introduce--root .introduce__card__img__child {
+	width: 100%;
+	height: 0px;
+	padding-bottom: 100%;
+	position: relative;
+}
+.introduce--root .introduce__card__img__child img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.introduce--root .introduce__longCard {
+	display: flex;
+	max-width: 1140px;
+	max-height: 1080px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.introduce--root .introduce__longCard__list {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+}
+.introduce--root .introduce__longCard__list__txt {
+	padding-left: 18%;
+	padding-right: 18%;
+}
+.introduce--root .introduce__longCard__list__txt__child h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+.introduce--root .introduce__longCard__list__txt__child:first-child {
+	margin-top: 92px;
+}
+.introduce--root
+	.introduce__longCard__list__txt__child
+	~ .introduce__longCard__list__txt__child
+	h2 {
+	margin-top: 52px;
+}
+.introduce--root .introduce__longCard__list__txt__child p {
+	font-size: 16px;
+	margin-top: 4px;
+}
+.introduce--root .introduce__longCard__list a {
+	margin-left: 18%;
+	margin-right: 18%;
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	color: #000;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	margin-top: 60px;
+	border: 2px solid #000000;
+	border-radius: 30px;
+	text-align: center;
+	margin-bottom: 92px;
+	transition: all 0.3s;
+}
+.introduce--root .introduce__longCard__list a:hover {
+	color: #fff;
+	background-color: #000;
+}
+.introduce--root .introduce__longCard__img {
+	width: 50%;
+}
+.introduce--root .introduce__longCard__img__child {
+	width: 100%;
+	height: 100%;
+}
+.introduce--root .introduce__longCard__img__child img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+	.introduce--root .introduce__card,
+	.introduce--root .introduce__longCard {
+		flex-direction: column;
+		max-height: none;
+	}
+	.introduce--root .introduce__card__txt,
+	.introduce--root .introduce__card__img,
+	.introduce--root .introduce__longCard__list,
+	.introduce--root .introduce__longCard__img {
+		width: 100%;
+	}
+	.introduce--root .introduce__card__txt {
+		order: 1;
+	}
+	.introduce--root .introduce__card__txt__child,
+	.introduce--root .introduce__longCard__list__txt {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.introduce--root .introduce__card ~ .introduce__card,
+	.introduce--root .introduce__longCard {
+		margin-top: 32px;
+	}
+	.introduce--root .introduce__card__txt__child h2,
+	.introduce--root .introduce__longCard__list__txt__child:first-child {
+		margin-top: 8px;
+	}
+	.introduce--root
+		.introduce__longCard__list__txt__child
+		~ .introduce__longCard__list__txt__child
+		h2 {
+		margin-top: 20px;
+	}
+	.introduce--root .introduce__longCard__list a {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,65 @@
+.banner--root .banner {
+	position: relative;
+	margin-bottom: 60px;
+	overflow: hidden;
+}
+
+.banner--root .banner__img {
+	width: 100%;
+	object-fit: cover;
+}
+.banner--root .banner__txt {
+	position: absolute;
+	top: 34%;
+	left: 56%;
+	/* right: 21%;
+	bottom: 33.33%; */
+	/* top: 295px;
+	left: 1080px; */
+	color: #fff;
+	max-width: 445px;
+	display: flex;
+	flex-direction: column;
+}
+.banner--root .banner__txt h2 {
+	font-size: 40px;
+}
+.banner--root .banner__txt p {
+	font-size: 24px;
+	margin-bottom: 16px;
+}
+.banner--root .banner__txt a {
+	font-size: 28px;
+	max-width: 350px;
+	padding: 13px 0;
+	background: #ffffff4d 0% 0% no-repeat padding-box;
+	border: 2px solid #ffffff;
+	border-radius: 30px;
+	color: #fff;
+	text-align: center;
+	transition: all 0.3s;
+}
+.banner--root .banner__txt a:hover {
+	background-color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+	.banner--root .banner {
+		margin-bottom: 40px;
+	}
+	.banner--root .banner__img {
+		height: 480px;
+	}
+	.banner--root .banner__txt {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 96%;
+	}
+	.banner--root .banner__txt h2 {
+		font-size: 32px;
+	}
+	.banner--root .banner__txt p {
+		font-size: 20px;
+	}
+}

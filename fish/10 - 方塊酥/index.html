@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方塊酥</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC',sans-serif;
+        }
+        .root{
+            width: 100vh;
+            height: 100vh;
+            background-color: #000;
+        }
+        .card--root {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .card--root .card{
+            float:left;
+            position: relative;
+        }
+        .card--root .card img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .card--root .card:first-child{
+            width: 50%;
+        }
+        /* 等同 .card + .card */
+        .card--root .card:first-child ~ .card{
+            width: 25%;
+        }
+        .card--root .card .card__txt {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            text-align: center;
+            color: rgb(255, 255, 255,0);
+            background-color: rgba(0,0,0,0);
+            /* 有這個的話，文字跟背景不用設定初始透明度，上方0無效 */
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.3s;
+            /* 當物件超出範圍時做的行為 */
+            overflow: hidden;
+        }
+        .card--root .card:hover .card__txt{
+            color: rgb(255, 255, 255,1);
+            background-color: rgba(0,0,0,0.6);
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card--root .card .card__txt h3{
+            margin-top: 25%;
+            margin-bottom: .4em;
+        }
+        .card--root .card .card__txt p{
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="card--root">
+            <div class="card">
+                <img src="https://picsum.photos/500/500?random=10" alt="">
+                <div class="card__txt">
+                    <h3>後端都懂切版</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime excepturi cupiditate nobis consectetur magnam. Sapiente fuga nobis architecto, ducimus atque animi impedit cumque commodi quia officia soluta optio doloremque esse!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/500/500?random=11" alt="">
+                <div class="card__txt">
+                    <h3>後端也懂css</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In eius officia sed! Doloremque totam consequatur accusantium quaerat neque tempora dolorem.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/500/500?random=12" alt="">
+                <div class="card__txt">
+                    <h3>後端還會html</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, dolores.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/500/500?random=13" alt="">
+                <div class="card__txt">
+                    <h3>我甚麼都不會</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/500/500?random=14" alt="">
+                <div class="card__txt">
+                    <h3>55555555</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, alias quo, atque expedita error qui itaque temporibus perspiciatis rerum id debitis nisi nam laudantium incidunt odio deleniti quidem earum magni porro ullam beatae animi! Quaerat laboriosam totam, rerum molestias laborum sapiente nemo possimus illo consequuntur aut nobis delectus minus architecto?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
