@@ -13,9 +13,7 @@
             list-style: none;
             font-family: 'Noto Sans TC',sans-serif;
         }
-        .root{
-            width: 100%;
-            height: 100%;
+        body{
             background-color: #000;
         }
         .card--root {
@@ -29,14 +27,21 @@
         }
         .card--root .card img{
             width: 100%;
+            height: 100%;
             vertical-align: middle;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         .card--root .card:first-child{
             width: 50%;
+            padding-bottom: 50%;
         }
         /* 等同 .card + .card */
         .card--root .card:first-child ~ .card{
             width: 25%;
+            padding-bottom: 25%;
         }
         .card--root .card .card__txt {
             position: absolute;
@@ -76,13 +81,15 @@
         <div class="card--root">
             <a href="https://nalocal.github.io/realtime-weather-app/" target="_blank" class="card">
                 <img src="https://i.imgur.com/Hhdewia.jpg" alt="">
+                <!-- <img src="https://picsum.photos/500/500?random=10" alt=""> -->
                 <div class="card__txt">
                     <h3>天氣介面</h3>
                     <p>從 Hooks 開始，讓你的網頁 React 起來</p>
                 </div>
             </a>
-            <a href="https://nalocal.github.io/Front-end-design/sixSchool-Front-end-design/04/" class="card">
+            <a href="https://nalocal.github.io/Front-end-design/sixSchool-Front-end-design/04/" target="_blank" class="card">
                 <img src="https://i.imgur.com/3U27G8x.jpg" alt="">
+                <!-- <img src="https://picsum.photos/500/200?random=11" alt=""> -->
                 <div class="card__txt">
                     <h3>香水電商</h3>
                     <p>RWD首頁版型切版練習</p>
