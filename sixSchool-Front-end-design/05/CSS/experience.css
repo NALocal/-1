@@ -1,0 +1,108 @@
+.experience-root{
+    margin-top: 56px;
+}
+.experience_wire{
+    margin-top: 48px;
+}
+.experience_wire_entries{
+    position: relative;
+}
+.experience_wire_entries-child{
+    width:calc(67% - 110px);
+    max-width: 680px;
+    margin: 0 auto;
+    /* 不同的做法 */
+    /* position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0%); */
+}
+.experience_wire_entries_head{
+    /* 避免x軸被這東西推出來 */
+    width:0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 46px;
+}
+.experience_wire_entries_head img{
+    transform: translate(-50%,0%);
+}
+.experience_wire_entries_entry{
+    width: calc(50% - 33px);
+    max-width: 260px;
+    border: 1px solid #FB56BF;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: 0.53px;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 9px;
+    text-align: right;
+    float:left; 
+    clear:both;
+}
+.experience_wire_entries_entry ~ .experience_wire_entries_entry{
+    margin-top: 7px;
+}
+.experience_wire_entries_entry:nth-child(2n+1){
+    text-align: left;
+    float: right;
+}
+.experience_wire_entries_entry:last-child{
+    margin-bottom: 46px;
+}
+.experience_wire_entries_entry:before{
+    content: '';
+    position: absolute;
+    top:0px;
+    left:50%;
+    bottom:0px;
+    transform:translateX(-50%);
+    width:2px;
+    background-color:#D8D8D8;
+}
+.experience_wire_entries_entry div{
+    margin-top: 10px;
+}
+.experience_wire_entries_entry_time{
+    color: #4A4A4A;
+    font-weight: 600;
+    position: relative;
+}
+.experience_wire_entries_entry_time:before{
+    content:'';
+    position: absolute;
+    width: 24px;
+    height: 28px;
+    background-image: url(../assets/dot-timeItem.png);
+    top: -40%;
+    right: -55px;
+    z-index: 1;
+}
+.experience_wire_entries_entry:nth-child(2n+1) .experience_wire_entries_entry_time:before{
+    left: -58px;
+}
+.experience_wire_entries_entry_job{
+    color: #8A1737;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+.experience_wire_entries_entry_group{
+    color: #4A4A4A;
+}
+.experience_wire_entries_entry_content{
+    color: #9B9B9B;
+    line-height: 18px;
+    transform: scale(0.83) translate(-10%,0%);
+    width: 120%;
+}
+.experience_wire_entries_footer{
+    max-width: 46px;
+    height: 4px;
+    background: #D8D8D8;
+    border-radius: 2px;
+    clear:both;
+    margin: 0 auto;
+}

@@ -1,0 +1,52 @@
+.header{
+    width:100%;
+    display: inline-block;
+    margin-top: 125px;
+}
+.header_shape{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.header_content{
+    display: flex;
+    width:calc(100% - 135px);
+    float:right;
+    clear:both;
+    
+}
+.header_content_card_avatar{
+    width:100%;
+    max-width: 151px;
+}
+.header_content_card h1{
+    font-size: 42px;
+    text-align: center;
+    margin-top: 11px;
+}
+.header_content_card p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+}
+.header_content_contact{
+    margin-left: 135px;
+}
+.header_content_contact div{
+    display: flex;
+}
+.header_content_contact div ~ div{
+    margin-top: 30px;
+}
+.header_content_contact div img{
+    width:100%;
+    max-width: 26px;
+}
+.header_content_contact div p{
+    color: #ffffff;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+}

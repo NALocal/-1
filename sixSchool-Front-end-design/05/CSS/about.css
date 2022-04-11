@@ -1,0 +1,26 @@
+.about-root{
+    margin-top: 98px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.about_card{
+    margin-top: 48px;
+    display: flex;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.about_card_avatar{
+}
+.about_card_avatar img{
+    width: 100%;
+    max-width: 260px;
+}
+.about_card_content{
+    margin-top: 26px;
+    max-width: 442px;
+    margin-left: 44px;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 550;
+    color:#878787;
+}
