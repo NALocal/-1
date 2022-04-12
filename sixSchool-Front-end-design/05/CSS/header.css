@@ -34,17 +34,17 @@
 .header_content_contact{
     margin-left: 135px;
 }
-.header_content_contact div{
+.header_content_contact li{
     display: flex;
 }
-.header_content_contact div ~ div{
+.header_content_contact li ~ li{
     margin-top: 30px;
 }
-.header_content_contact div img{
+.header_content_contact li img{
     width:100%;
     max-width: 26px;
 }
-.header_content_contact div p{
+.header_content_contact li p{
     color: #ffffff;
     margin-top: auto;
     margin-bottom: auto;

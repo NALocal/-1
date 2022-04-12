@@ -16,9 +16,9 @@
     max-width: 260px;
 }
 .about_card_content{
-    margin-top: 26px;
+    padding-top: 26px;
     max-width: 442px;
-    margin-left: 44px;
+    padding-left: 44px;
     font-size: 14px;
     line-height: 1.8;
     font-weight: 550;

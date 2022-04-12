@@ -65,12 +65,12 @@ img{
 	position: relative;
 }
 
-.h1 h1{
+.h1{
     font-size: 24px;
     color: #1736DC;
     text-align: center;
     font-weight: 600;
 }
-.h1.pink h1{
+.pink{
 	color: #FB56BF;
 }
