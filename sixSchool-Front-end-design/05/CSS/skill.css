@@ -42,8 +42,6 @@
 }
 .skill_cards_card-child{
     margin-top: 25px;
-    margin-left: 10%;
-    margin-right: 10%;
     margin-bottom: 35px;
 }
 .skill_cards_card_img{
@@ -66,7 +64,11 @@
     margin-top: 26px;
     font-size: 12px;
     line-height: 1.17;
+    list-style: disc;
+    margin-left: 15%;
+    margin-right: 10%;
 }
-.skill_cards_card_list span{
+.skill_cards_card_list li{
+    padding-left: 10px;
     transform: scale(0.83);
 }
