@@ -10,13 +10,13 @@ const travelPage = document.querySelector('.travel_page');
 
 const goTopBtn = document.querySelector('.gotop');
 
-function isMobile() {
+function displayCount() {
   try { document.createEvent("TouchEvent"); return 4; }
   catch (e) { return 10; }
 }
 
 // 一頁顯示數量
-const onePage = isMobile();
+const onePage = displayCount();
 // 總頁數
 let totalPage = 0;
 // 當前頁碼
@@ -28,7 +28,7 @@ function getOption() {
   const areaLen = area.length;
   for (let i = 0; i < areaLen; i++) {
     let areaName = area[i];
-    let str = document.createElement('option');
+    const str = document.createElement('option');
     str.textContent = areaName;
     str.setAttribute('value', areaName);
     headerSelect.appendChild(str);
@@ -63,15 +63,15 @@ function showList(e) {
     e.preventDefault();
     // 換頁
     if (e.path[2].classList[0] === 'travel_page') {
-      switch (e.target.innerText) {
-        case '< prev':
+      switch (e.target.dataset.num) {
+        case 'prev':
           if (nowPage !== 0) nowPage--;
           break;
-        case 'next >':
+        case 'next':
           if (nowPage !== totalPage - 1) nowPage++;
           break;
         default:
-          nowPage = e.target.innerText - 1;
+          nowPage = e.target.dataset.num - 1;
           break;
       }
       select = localStorage.getItem('select');
@@ -126,16 +126,16 @@ function showList(e) {
   }
   travelList.innerHTML = str;
 
-  if (nowPage === 0) str = '<li><a class="Noclick" href="#">< prev</a></li>';
-  else str = '<li><a href="#">< prev</a></li>';
+  if (nowPage === 0) str = '<li><a data-num="prev" class="Noclick" href="#">< prev</a></li>';
+  else str = '<li><a data-num="prev" href="#">< prev</a></li>';
 
   for (let k = 0; k < totalPage; k++) {
-    if (k === nowPage) str += '<li><a class="highlight" href="#">' + (k + 1) + '</a></li>';
-    else str += '<li><a href="#">' + (k + 1) + '</a></li>';
+    if (k === nowPage) str += '<li><a data-num="' + (k + 1) + '" class="highlight" href="#">' + (k + 1) + '</a></li>';
+    else str += '<li><a data-num="' + (k + 1) + '" href="#">' + (k + 1) + '</a></li>';
   }
 
-  if (nowPage === totalPage - 1 || totalPage === 0) str += '<li><a class="Noclick" href="#">next ></a></li>';
-  else str += '<li><a href="#">next ></a></li>';
+  if (nowPage === totalPage - 1 || totalPage === 0) str += '<li><a data-num="next" class="Noclick" href="#">next ></a></li>';
+  else str += '<li><a data-num="next" href="#">next ></a></li>';
   travelPage.innerHTML = str;
 }
 
