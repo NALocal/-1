@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒數圓</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700;900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            background-color: BlanchedAlmond;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .half-round {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            transform-origin: bottom;
+            background: MediumTurquoise;
+        }
+        .first {
+            transform: rotate(-90deg);
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            animation-name: roundFirst;
+            animation-timing-function: steps(1, start);
+        }
+        @keyframes roundFirst {
+            0%, 50% {
+                background: MediumTurquoise;
+                left: 0;
+                z-index: 0;
+            }
+            100% {
+                background-color: BlanchedAlmond;
+                left: 50%;
+                z-index: 1;
+            }
+        }
+        .second {
+            transform: rotate(90deg);
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            animation-name: roundSecond;
+            animation-timing-function: linear;
+        }
+        @keyframes roundSecond {
+            0% {
+            transform: rotate(90deg);
+            }
+            100% {
+            transform: rotate(450deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="half-round first"></div>
+        <div class="half-round second"></div>
+    </div>
+</body>
+</html>
